@@ -25,6 +25,16 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 	if( sob.m_url == "/HELLO" ){
 
 		i_giv.end( "WORLD" );
+	}else
+	if( sob.m_url == "/SELF" ){
+	
+		LIB_F_S.readFile( "./server.js" , function(err,cof){
+
+			if(err){
+				cof = "[messed up]" ;
+			}else{
+				sob.m_giv.writeHead( 200 , TXT );
+			};
 	}else{
 		i_giv.end( sob.m_url );
 	};
