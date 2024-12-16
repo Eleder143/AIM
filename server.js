@@ -68,10 +68,10 @@ if( notnode ){ window.onload = function(){
 			/** Create Document Element **/
 			LOG( "[bef:dom_bod]" , dom_bod );
 			dom_bod = document.createElement( "body" );
-			document.body = dom_dom ;
+			document.body = dom_bod ;
 		};;
 
-		LOG( "[dom_dom]" , dom_dom );
+		LOG( "[dom_bod]" , dom_bod );
 
 };;};;
 
