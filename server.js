@@ -51,6 +51,28 @@ if( notnode ){ window.onload = function(){
 			};;
 			return( o_has );
 		};;
+
+
+		var   dom_bod = document.body            ;
+		const dom_roo = document.documentElement ;
+
+		if( HAS( dom_roo ) ){
+			LOG( "[dom_roo]" , dom_roo );
+		}else{
+			ERR( "[dom_roo}" );
+		};;
+		if( HAS( dom_bod ) ){
+		
+			/** Okay. Do nothing. Already exists **/
+		}else{
+			/** Create Document Element **/
+			LOG( "[bef:dom_bod]" , dom_bod );
+			dom_bod = document.createElement( "body" );
+			document.body = dom_dom ;
+		};;
+
+		LOG( "[dom_dom]" , dom_dom );
+
 };;};;
 
 
