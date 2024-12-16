@@ -3,4 +3,4 @@
 
 	git commit -m "[VIP_AUTO_COMMIT:dimoz]"
 
-	git push HER_OKU master
+	git push heroku master
