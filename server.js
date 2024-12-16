@@ -25,6 +25,35 @@ const LIB_F_S = yesnode ? require( "fs" )               :{};
 const LIB_URL = yesnode ? require( "url" )              :{};
 const LIB_Q_S = yesnode ? require( "node:querystring" ) :{};
 
+if( notnode ){ window.onload = function(){
+
+		function ERR( i_msg ){
+
+			alert( "[ERR]:" + i_msg );
+			throw( "[ERR]:" + i_msg );
+		};;
+		function LOG( i_msg , i_any ){
+
+			console.log( i_msg, ":" , i_any );
+		};;
+		function HAS( i_obj ){
+
+			var o_has =( 0 );
+
+			if( null      == i_obj
+			||  undefined == i_obj
+			||            ( !i_obj )
+			|| ""         == i_obj
+			){
+				o_has =( 0 );
+			}else{
+				o_has =( 1 );
+			};;
+			return( o_has );
+		};;
+};;};;
+
+
 if( yesnode ){
 
 require( "http" ).createServer( function( i_ask , i_giv ){
