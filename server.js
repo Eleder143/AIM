@@ -1,4 +1,7 @@
 
+var yesnode =( "undefined" === typeof window );
+var notnode =( "undefined"  != typeof window );
+
 var webpage =( "" //:------------------://
 	<!DOCTYPE HTML><head>
 	<meta charset="utf-8"><title>
@@ -11,19 +14,16 @@ var webpage =( "" //:------------------://
 	</head>
 );;
 
-var yesnode =( "undefined" === typeof window );
-var notnode =( "undefined"  != typeof window );
-
-const LIB_F_S = yesnode ? require( "fs" )               :{};
-const LIB_URL = yesnode ? require( "url" )              :{};
-const LIB_Q_S = yesnode ? require( "node:querystring" ) :{};
-
 const TXT = { "Content-Type": "text/javascript"};
 const PNG = { "Content-Type": "image/png"};
 const HTM = { "Content-Type": "text/html"};
 const J_S = { "Content-Type": "text/javascript"};
 const EXE = { "Content-Type": "application/x-msdownload"};
 const CSS = { "Content-Type": "text/css"};
+
+const LIB_F_S = yesnode ? require( "fs" )               :{};
+const LIB_URL = yesnode ? require( "url" )              :{};
+const LIB_Q_S = yesnode ? require( "node:querystring" ) :{};
 
 if( yesnode ){
 
@@ -52,7 +52,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 			}else{
 				sob.m_giv.writeHead( 200 , TXT );
 			};;
-			i_giv.end( cof , "utf-8" );
+			sob.m_giv.end( cof , "utf-8" );
 		});;
 	}else{
 
@@ -61,7 +61,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 	};;
 
 }).listen(process.env.PORT);
-};
+};;
 /** CHANGE_HISTORY ***************************************** ***
  
     TUTORIAL PART 018 : https://pastebin.com/ZCFNxebJ
