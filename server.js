@@ -3,15 +3,15 @@ var yesnode =( "undefined" === typeof window );
 var notnode =( "undefined"  != typeof window );
 
 var webpage =( "" //:------------------://
-	<!DOCTYPE HTML><head>
-	<meta charset="utf-8"><title>
-		[AIM]
-	</title>
-		<script
-			src    ="./ATOMIC_IVY_MMO"
-			charset="UTF-8">
-		</script>
-	</head>
+	+'	<!DOCTYPE HTML><head>				'
+	+'	<meta charset="utf-8"><title>		'
+	+'		[AIM]							'
+	+'	</title>							'
+	+'		<script							'
+	+'			src    ="./ATOMIC_IVY_MMO"	'
+	+'			charset="UTF-8">			'
+	+'		</script>						'
+	+'	</head>								'
 );;
 
 const TXT = { "Content-Type": "text/javascript"};
