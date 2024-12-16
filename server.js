@@ -34,10 +34,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 				cof = "[messed up]" ;
 			}else{
 				sob.m_giv.writeHead( 200 , TXT );
-			};
+			};;
+			sob.m_giv.end( cof , "utf-8" );
+		});;
 	}else{
 		i_giv.end( sob.m_url );
-	};
+	};;
 
 }).listen(process.env.PORT);
  
