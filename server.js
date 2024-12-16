@@ -13,9 +13,14 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     };;
  
     sob.m_url = sob.m_url.toUpperCase();             //!#MRI#!//
- 
-    i_giv.end( sob.m_url );
- 
+	
+	if( sob.m_url == "/HELLO" ){
+
+		i_giv.end( "WORLD" );
+	}else{
+		i_giv.end( sob.m_url );
+	};
+
 }).listen(process.env.PORT);
  
 /** CHANGE_HISTORY ***************************************** ***
